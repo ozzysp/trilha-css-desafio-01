@@ -13,6 +13,10 @@
     src: url('../fonts/Roboto/Roboto-Bold.ttf');
 }
 
+body {
+    background-color: black;
+}
+
 * {
     font-family: roboto-thin;
 }
@@ -26,11 +30,12 @@ h1 {
     Arial, "Noto Sans", sans-serif;
     text-transform: uppercase;
     font-weight: 900;
-    background-color: linear-gradient rgb(8, 26, 34);
-    background-image: linear-gradient(rgb(29, 106, 138),  rgb(4, 14, 18));
+    background-image: linear-gradient(rgb(22, 165, 226), rgb(19, 165, 227),
+    rgb(8, 109, 148));
     -webkit-background-clip: text;
-    background-clip: transparent;  
+    -webkit-text-fill-color: transparent; 
 }
+
 
 h2 {
     text-align: center;
@@ -38,17 +43,38 @@ h2 {
     Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, 
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
     Arial, "Noto Sans", sans-serif;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: larger;
     font-weight: 600;
-    color: rgb(51, 168, 219);
+    color: rgb(20, 165, 227);
 }
 
-.logo { 
-    width: 140px;
-    height: auto;
-    border-radius: 100px;
-    background-color: #0407332a;
+.transform-world {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 
+    Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif;
+    width: 400px;
+    height: 90px;
+    justify-content: center;
+    text-align: center;
+    text-transform: lowercase;
+    color: aliceblue;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    height: 0vh;
+    display: grid;
+    place-items: center;
+
+
+}
+
+.logo img {
+    width: 200px;
+    background-color: black 0.5;
 }
 
 img {
@@ -60,17 +86,7 @@ img {
     height: 100%;
 }
 
-p {
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 
-    Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, 
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
-    Arial, "Noto Sans", sans-serif;
-    width: 400px;
-    height: 90px;
-    justify-content: center;
-    background-color: #ff00007d;
-    text-align: center;
-}
+
 
 footer{
     width: 140px;
@@ -86,22 +102,77 @@ button {
     text-align: center;
 }
 
-.modules-list {
+div {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: aliceblue;
+}
+
+#mod-01 {
+    text-align: center;
+    max-width: 600px;
+    min-width: 550px;
     font-size: 40px;
+    font-display: flex;
     text-align: center;
     font-size: larger;
     font-weight: 600;
+}
+
+#mod-02 {
+    text-align: center;
+    max-width: 600px;
+    min-width: 550px;
+    font-size: 40px;
+    font-display: flex;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+}
+
+#mod-03 {
+    text-align: center;
+    max-width: 600px;
+    min-width: 550px;
+    font-size: 40px;
+    font-display: flex;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+}
+
+span {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    max-width: 400px;
+    min-width: 300px;
+    border-color: black;
+    border-spacing: 5px;
+    border-style: solid;
+    border-radius: 50px;
     color: rgb(51, 168, 219);
 }
 
+.banner {
+    width: 100%;
+}
+
 #img-bg {
-    display: block;
-    width: 700px;
-    height: auto;
-    display: flex;
+    margin-top: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
     justify-content: center;
-    border-color: aqua;
-    border-style: solid ;
-    background-color: linear-gradient rgb(8, 26, 34);
+    align-items: center;
+    height: 100%;
+    max-width: 1000px;
+    min-width: 1000px;
+    border: 1px solid aqua;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
     background-image: linear-gradient(rgb(2, 13, 18), rgb(8, 26, 34), rgb(4, 14, 18) );   
 }
+
+
