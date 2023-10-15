@@ -1,3 +1,6 @@
+@import url('./reset.css');
+@import url('./global.css');
+
 @font-face {
     font-family: roboto;
     src: url('../fonts/Roboto/Roboto-Regular.ttf');
@@ -13,18 +16,42 @@
     src: url('../fonts/Roboto/Roboto-Bold.ttf');
 }
 
+@font-face {
+    font-family: inter;
+    src: url('../fonts/Inter/static/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: inter-bold;
+    src: url('../fonts/Inter/static/Inter-Bold.ttf');
+}
+
 body {
     background-color: black;
+    width: 100vw;
+}
+
+:root {
+    --color-primary: #0d6efd;
+    --color-secondary: rgb(22, 165, 226);
+    --color-tertiary: rgb(19, 165, 227);
+    --color-quartenary: white;
+    --color-quintenary: rgb(51, 168, 219);
 }
 
 * {
     font-family: roboto-thin;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 100%;
 }
 
 h1 {
     font-size: 40px;
     text-align: center;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 
+    font-family: inter-black, ui-sans-serif, system-ui, -apple-system, 
     Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, 
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
     Arial, "Noto Sans", sans-serif;
@@ -33,146 +60,180 @@ h1 {
     background-image: linear-gradient(rgb(22, 165, 226), rgb(19, 165, 227),
     rgb(8, 109, 148));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+    margin: 30px
 }
-
 
 h2 {
-    text-align: center;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 
-    Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, 
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
-    Arial, "Noto Sans", sans-serif;
-    text-transform: capitalize;
-    font-size: larger;
-    font-weight: 600;
-    color: rgb(20, 165, 227);
 }
 
-.transform-world {
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 
-    Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, 
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
-    Arial, "Noto Sans", sans-serif;
+.button {
+    margin: 30px;
+    padding: 20px;
     width: 400px;
-    height: 90px;
-    justify-content: center;
-    text-align: center;
-    text-transform: lowercase;
-    color: aliceblue;
-}
-
-.logo {
-    padding: 0;
-    margin: 0;
-    height: 0vh;
-    display: grid;
-    place-items: center;
-
-
-}
-
-.logo img {
-    width: 200px;
-    background-color: black 0.5;
-}
-
-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-footer{
-    width: 140px;
-    height: auto;
-}
-
-button {
-    width: 140px;
-    height: auto;
-    border-color: rgb(26, 118, 193);
-    justify-content: center;
-    background-color: #3e0b6e53;
-    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border-image-source: linear-gradient(180deg, #3BA1CD 0%, #1572B7 100%);
+    -webkit-background-clip: text;
+    -webkit-background-clip: border-box;
 }
 
 div {
-    margin-bottom: 20px;
-    text-transform: capitalize;
-    color: aliceblue;
+    font-size: 20px;
+    border:100px; 
+    text-align: center;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 
+    Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
-#mod-01 {
-    text-align: center;
-    max-width: 600px;
-    min-width: 550px;
-    font-size: 40px;
-    font-display: flex;
-    text-align: center;
-    font-size: larger;
-    font-weight: 600;
-}
-
-#mod-02 {
-    text-align: center;
-    max-width: 600px;
-    min-width: 550px;
-    font-size: 40px;
-    font-display: flex;
-    text-align: center;
-    font-size: larger;
-    font-weight: 600;
-}
-
-#mod-03 {
-    text-align: center;
-    max-width: 600px;
-    min-width: 550px;
-    font-size: 40px;
-    font-display: flex;
-    text-align: center;
-    font-size: larger;
-    font-weight: 600;
-}
-
-span {
-    text-align: center;
+.banner .banner-content {
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-self: center;
-    max-width: 400px;
-    min-width: 300px;
-    border-color: black;
-    border-spacing: 5px;
-    border-style: solid;
-    border-radius: 50px;
-    color: rgb(51, 168, 219);
-}
-
-.banner {
-    width: 100%;
-}
-
-#img-bg {
-    margin-top: 0;
-    height: 100vh;
-    display: grid;
-    place-items: center;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    max-width: 1000px;
-    min-width: 1000px;
-    border: 1px solid aqua;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    background-image: linear-gradient(rgb(2, 13, 18), rgb(8, 26, 34), rgb(4, 14, 18) );   
 }
 
+.banner .banner-content .logo {
+    width: 250px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .banner-content .text {
+    color: rgb(192, 192, 192);
+    font-family: roboto-thin;
+    text-transform: none;
+    width: 500px;
+    text-align: center;
+}
+
+.banner .banner-background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div .banner-background img {
+    width: 1440px;
+    height: 605px;
+    border: 1px solid #33A8DB;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-image: linear-gradient(rgb(2, 13, 18),
+    rgb(8, 26, 34), rgb(4, 14, 18) );
+}
+
+#learn {
+    margin-top: 240px;
+    padding: 10px;
+    width: auto;
+    height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(51, 168, 219);
+    font-size: 40px;
+    letter-spacing: 10px;
+    font-family: inter;
+}
+p {
+    margin: auto;
+    color: rgb(255, 255, 255);
+    width: 800px;
+    text-align: center;
+    font-family: inter;
+}
+
+.modules-list {
+    margin-top: 40px;
+    margin-bottom: 300px;
+    border: 2px solid red;
+    width: 700px;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    color: var(--color-quartenary);
+    font-size: larger;
+}
+
+.module {
+    margin: 8px;
+    padding: 16px;
+    border: 1px solid rgba(51, 168, 219, 1);
+    box-shadow: -2px 6px 4px 0px rgba(0, 0, 0, 0.4) inset;
+    border-radius: 30px;
+    text-align: center;
+    background: linear-gradient(0deg, #252525, #252525),
+    linear-gradient(0deg, #33A8DB, #33A8DB);
+    color: var(--color-quartenary);
+    font-size: medium;
+    text-transform: none;
+}
+
+.module span {
+    color: rgb(51, 168, 219);
+    text-align: center;
+    font-size: larger;
+}
+
+#transform-world {
+    margin: 10px;
+    padding: 20px;
+    width: auto;
+    height: 40px;
+    border: 1px solid red;
+    text-align: center;
+    color: var(--color-quartenary);
+}
+
+#professional-challenges {
+    width: auto;
+    height: 40px;
+    border: 1px solid red;
+    align-items: center;
+    color: var(--color-quartenary);
+}
+
+#evol {
+    width: auto;
+    height: 40px;
+    border: 1px solid red;
+    align-items: center;
+    color: var(--color-quartenary);
+}
+
+#professional-challenges img {
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    align-items: center;
+}
+
+#text-full {
+    width: auto;
+    height: 140px;
+    border: 1px solid red;
+    align-items: center;
+    color: var(--color-quartenary);
+}
+
+.footer .dio-logo {
+    width: auto;
+    height: 40px;
+    border: 1px solid red;
+    align-items: center;
+}
 
