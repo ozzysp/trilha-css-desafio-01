@@ -27,8 +27,7 @@
 }
 
 body {
-    background-color: black;
-    width: 100vw;
+    background-image: url('../images/woman-code.png');
 }
 
 :root {
@@ -127,8 +126,8 @@ div {
 }
 
 div .banner-background img {
-    width: 1440px;
-    height: 605px;
+    width: auto;
+    height: auto;
     border: 1px solid #33A8DB;
     border-top: 0;
     border-left: 0;
@@ -149,6 +148,7 @@ div .banner-background img {
     letter-spacing: 10px;
     font-family: inter;
 }
+
 p {
     margin: auto;
     color: rgb(255, 255, 255);
