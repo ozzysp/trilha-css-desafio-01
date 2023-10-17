@@ -26,8 +26,20 @@
     src: url('../fonts/Inter/static/Inter-Bold.ttf');
 }
 
+@font-face {
+    font-family: raleway-black;
+    src: url('../fonts/Raleway/static/Raleway-Black.ttf');
+}
+
+
 body {
+    background-color: #000000;
+    position: relative;
     background-image: url('../images/woman-code.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: contain;
+    background-position: center center;
 }
 
 :root {
@@ -36,6 +48,7 @@ body {
     --color-tertiary: rgb(19, 165, 227);
     --color-quartenary: white;
     --color-quintenary: rgb(51, 168, 219);
+    --gradient: linear-gradient(deg190, var(--color-secondary), var(--color-primary))
 }
 
 * {
@@ -63,8 +76,6 @@ h1 {
     margin: 30px
 }
 
-h2 {
-}
 
 .button {
     margin: 30px;
@@ -72,14 +83,18 @@ h2 {
     width: 400px;
     text-transform: uppercase;
     letter-spacing: 5px;
-    border-image-source: linear-gradient(180deg, #3BA1CD 0%, #1572B7 100%);
-    -webkit-background-clip: text;
-    -webkit-background-clip: border-box;
+    background-color: transparent;
+    color: var(--color-secondary);
+}
+
+section .button {
+    border: 2px solid white;
+    border-image: var(--gradient) 1;
 }
 
 div {
     font-size: 20px;
-    border:100px; 
+    border:100px;
     text-align: center;
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, 
     Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, 
@@ -87,6 +102,13 @@ div {
     Arial, "Noto Sans", sans-serif;
     text-transform: uppercase;
     font-weight: 900;
+}
+
+#course-content{
+    display: grid;
+    background-color: black;
+    margin-top: 85px;
+    border-bottom: 1px solid #33A8DB;
 }
 
 .banner .banner-content {
@@ -128,16 +150,13 @@ div {
 div .banner-background img {
     width: auto;
     height: auto;
-    border: 1px solid #33A8DB;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+    border-bottom: 1px solid #33A8DB;
     background-image: linear-gradient(rgb(2, 13, 18),
     rgb(8, 26, 34), rgb(4, 14, 18) );
 }
 
 #learn {
-    margin-top: 240px;
+    margin-top: 100px;
     padding: 10px;
     width: auto;
     height: 80px;
@@ -157,25 +176,20 @@ p {
     font-family: inter;
 }
 
-.modules-list {
+#modules-list {
+
     margin-top: 40px;
     margin-bottom: 300px;
-    border: 2px solid red;
-    width: 700px;
-    height: 60px;
-    text-align: center;
-    align-items: center;
     color: var(--color-quartenary);
-    font-size: larger;
 }
 
 .module {
-    margin: 8px;
+    margin: 10px;
+    width: 700px;
     padding: 16px;
     border: 1px solid rgba(51, 168, 219, 1);
     box-shadow: -2px 6px 4px 0px rgba(0, 0, 0, 0.4) inset;
     border-radius: 30px;
-    text-align: center;
     background: linear-gradient(0deg, #252525, #252525),
     linear-gradient(0deg, #33A8DB, #33A8DB);
     color: var(--color-quartenary);
@@ -189,30 +203,38 @@ p {
     font-size: larger;
 }
 
-#transform-world {
+#transform-world p{
+    font-family: raleway-black;
     margin: 10px;
+    margin-bottom: 300px;
+    margin-left: 100px;
     padding: 20px;
-    width: auto;
-    height: 40px;
-    border: 1px solid red;
-    text-align: center;
+    width: 350px;
+    height: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: left;
+    text-transform: lowercase;
     color: var(--color-quartenary);
+    text-shadow: 10px 8px 0px rgba(51, 168, 219, 1);
+
 }
 
 #professional-challenges {
-    width: auto;
-    height: 40px;
-    border: 1px solid red;
-    align-items: center;
+    display: grid;
     color: var(--color-quartenary);
+    align-items: center;
 }
 
 #evol {
-    width: auto;
-    height: 40px;
-    border: 1px solid red;
-    align-items: center;
-    color: var(--color-quartenary);
+    position: absolute;
+    border: 1px solid rgb(157, 0, 255);
+    margin-bottom: 300px;
+    width: 700px;
+    height: auto;
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-secondary);
 }
 
 #professional-challenges img {
@@ -230,10 +252,7 @@ p {
     color: var(--color-quartenary);
 }
 
-.footer .dio-logo {
-    width: auto;
-    height: 40px;
-    border: 1px solid red;
-    align-items: center;
+.footer {
+    display: flex;
+    justify-content: center;
 }
-
